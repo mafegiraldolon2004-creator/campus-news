@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "categoria": "EDUCACIÓN",
+        "titulo": "Nuevas becas para estudiantes",
+        "descripcion": "Conoce las oportunidades disponibles para continuar tu formación.",
+        "contenido": "Las becas universitarias representan una oportunidad para que los estudiantes continúen fortaleciendo su formación académica y puedan acceder a diferentes alternativas de apoyo durante sus estudios. En Campus News podrás consultar información sobre nuevas convocatorias, requisitos generales, fechas importantes y oportunidades dirigidas a la comunidad estudiantil. Te recomendamos revisar periódicamente las convocatorias disponibles y verificar sus requisitos antes de realizar cualquier proceso de inscripción.",
+        "imagen": "img/becas.jfif",
+        "destacada": true
+    },
+    {
+        "id": 2,
+        "categoria": "TECNOLOGÍA",
+        "titulo": "Semana de innovación 2026",
+        "descripcion": "Participa en talleres y actividades sobre nuevas tecnologías.",
+        "contenido": "La Semana de Innovación 2026 será un espacio para conocer nuevas ideas y herramientas relacionadas con la tecnología. Los estudiantes podrán participar en talleres, charlas y actividades enfocadas en innovación, creatividad y transformación digital. Esta iniciativa busca promover el aprendizaje y el interés por las nuevas tendencias tecnológicas dentro de la comunidad universitaria.",
+        "imagen": "img/innovacion.jfif",
+        "destacada": true
+    },
+    {
+        "id": 3,
+        "categoria": "OPORTUNIDADES",
+        "titulo": "Feria de empleo universitario",
+        "descripcion": "Conoce empresas y oportunidades para iniciar tu vida profesional.",
+        "contenido": "La feria de empleo universitario permitirá a los estudiantes conocer diferentes empresas y oportunidades laborales. Durante la actividad podrán encontrar información sobre ofertas de empleo, prácticas profesionales y procesos de selección. También será un espacio para conocer mejor el mercado laboral y prepararse para iniciar la vida profesional.",
+        "imagen": "img/empleo.jfif",
+        "destacada": true
+    },
+    {
+        "id": 4,
+        "categoria": "EDUCACIÓN",
+        "titulo": "Cursos gratuitos para estudiantes",
+        "descripcion": "Conoce nuevos cursos para fortalecer tus conocimientos y habilidades.",
+        "contenido": "Los estudiantes podrán acceder a diferentes cursos gratuitos para complementar su formación académica. Las opciones incluyen temas relacionados con tecnología, comunicación, habilidades profesionales y otras áreas de interés. Estos espacios buscan ofrecer nuevas herramientas que puedan ser útiles durante la etapa universitaria y posteriormente en el entorno laboral.",
+        "imagen": "img/cursos.jfif",
+        "destacada": false
+    },
+    {
+        "id": 5,
+        "categoria": "TECNOLOGÍA",
+        "titulo": "Taller de desarrollo web",
+        "descripcion": "Aprende conceptos básicos para crear tus primeros proyectos web.",
+        "contenido": "El taller de desarrollo web está dirigido a estudiantes interesados en aprender conceptos básicos para crear sitios web. Durante las actividades se trabajarán temas relacionados con HTML, CSS y JavaScript. El objetivo es que los participantes puedan conocer cómo se estructura una página web y desarrollar pequeños proyectos para poner en práctica lo aprendido.",
+        "imagen": "img/desarrollo-web.jfif",
+        "destacada": false
+    },
+    {
+        "id": 6,
+        "categoria": "EVENTOS",
+        "titulo": "Semana cultural universitaria",
+        "descripcion": "Disfruta actividades culturales y espacios para compartir con la comunidad.",
+        "contenido": "La Semana Cultural Universitaria reunirá diferentes actividades para promover la participación y la integración de los estudiantes. Durante la semana se realizarán espacios culturales, artísticos y recreativos en los que podrá participar toda la comunidad universitaria. La programación busca crear espacios diferentes a las actividades académicas y fortalecer la convivencia entre estudiantes.",
+        "imagen": "img/semana-cultural.jfif",
+        "destacada": false
+    }
+]
