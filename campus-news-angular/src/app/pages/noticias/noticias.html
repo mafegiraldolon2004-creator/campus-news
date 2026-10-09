@@ -1,0 +1,51 @@
+
+<!-- Página de noticias de Campus News -->
+
+<main class="pagina-noticias">
+    <section>
+        <h2>Noticias universitarias</h2>
+
+        <p>
+            Conoce las últimas novedades, becas,
+            eventos y oportunidades para estudiantes.
+        </p>
+
+        <!-- Noticias cargadas desde el archivo JSON -->
+        <div class="contenedor-noticias">
+
+            @for (noticia of noticias; track noticia.id) {
+
+                <article class="tarjeta">
+
+                    <img
+                        [src]="noticia.imagen"
+                        [alt]="noticia.titulo"
+                    >
+
+                    <div class="tarjeta-contenido">
+
+                        <span class="categoria">
+                            {{ noticia.categoria }}
+                        </span>
+
+                        <h3>{{ noticia.titulo }}</h3>
+
+                        <p>{{ noticia.descripcion }}</p>
+
+                        <a [routerLink]="['/detalle', noticia.id]">
+                            Leer más →
+                        </a>
+
+                    </div>
+
+                </article>
+
+            } @empty {
+
+                <p>No hay noticias disponibles.</p>
+
+            }
+
+        </div>
+    </section>
+</main>

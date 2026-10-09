@@ -1,0 +1,98 @@
+
+<main class="pagina-contacto">
+
+    <section class="encabezado-contacto">
+        <h1>Contáctanos</h1>
+        <p>
+            ¿Tienes alguna pregunta, sugerencia o noticia
+            que quieras compartir? Escríbenos.
+        </p>
+    </section>
+
+    <section class="contenedor-contacto">
+
+        <div class="informacion-contacto">
+            <h2>Estamos para escucharte</h2>
+
+            <p>
+                En Campus News queremos mantener informada
+                a nuestra comunidad universitaria.
+            </p>
+
+            <p>
+                Si tienes dudas, propuestas o deseas
+                compartir información, completa el
+                siguiente formulario.
+            </p>
+
+            <div class="mensaje-informativo">
+                <h3>Campus News</h3>
+                <p>Tu universidad. Tus noticias.</p>
+            </div>
+        </div>
+
+        <form
+            class="formulario-contacto"
+            (ngSubmit)="enviarMensaje()"
+            novalidate
+        >
+
+            <h2>Envíanos un mensaje</h2>
+
+            <label for="nombre">Nombre completo</label>
+            <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                [(ngModel)]="nombre"
+                placeholder="Escribe tu nombre"
+            >
+
+            <label for="correo">Correo electrónico</label>
+            <input
+                type="email"
+                id="correo"
+                name="correo"
+                [(ngModel)]="correo"
+                placeholder="ejemplo@correo.com"
+            >
+
+            <label for="asunto">Asunto</label>
+            <input
+                type="text"
+                id="asunto"
+                name="asunto"
+                [(ngModel)]="asunto"
+                placeholder="¿Sobre qué deseas escribirnos?"
+            >
+
+            <label for="mensaje">Mensaje</label>
+            <textarea
+                id="mensaje"
+                name="mensaje"
+                [(ngModel)]="mensaje"
+                rows="6"
+                placeholder="Escribe aquí tu mensaje"
+            ></textarea>
+
+            @if (mensajeError) {
+                <p class="mensaje-error" role="alert">
+                    {{ mensajeError }}
+                </p>
+            }
+
+            @if (mensajeExito) {
+                <p class="mensaje-exito" role="status">
+                    {{ mensajeExito }}
+                </p>
+            }
+
+            <button type="submit" class="boton-enviar">
+                Enviar mensaje
+            </button>
+
+        </form>
+
+    </section>
+
+</main>

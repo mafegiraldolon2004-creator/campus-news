@@ -1,0 +1,59 @@
+
+<main class="pagina-detalle">
+
+    @if (cargando) {
+        <p>Cargando noticia...</p>
+    } @else if (noticia) {
+
+        <article class="detalle-noticia">
+
+            <a routerLink="/noticias" class="volver">
+                ← Volver a noticias
+            </a>
+
+            <span class="categoria">
+                {{ noticia.categoria }}
+            </span>
+
+            <h1>{{ noticia.titulo }}</h1>
+
+            <p class="descripcion">
+                {{ noticia.descripcion }}
+            </p>
+
+            <img
+                [src]="noticia.imagen"
+                [alt]="noticia.titulo"
+                class="imagen-detalle"
+            >
+
+            <div class="contenido">
+                <p>{{ noticia.contenido }}</p>
+            </div>
+
+            <!-- Botón para agregar o quitar favoritos -->
+            <button
+                type="button"
+                class="boton-favorito"
+                (click)="alternarFavorito()"
+            >
+                @if (esFavorito) {
+                    ♥ Quitar de favoritos
+                } @else {
+                    ♡ Agregar a favoritos
+                }
+            </button>
+
+        </article>
+
+    } @else {
+
+        <section class="noticia-no-encontrada">
+            <h2>Noticia no encontrada</h2>
+            <p>No pudimos encontrar la noticia solicitada.</p>
+            <a routerLink="/noticias">Ver todas las noticias</a>
+        </section>
+
+    }
+
+</main>

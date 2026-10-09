@@ -1,0 +1,73 @@
+
+<main class="pagina-favoritos">
+
+    <section class="encabezado-favoritos">
+        <h1>Mis noticias favoritas</h1>
+        <p>
+            Aquí encontrarás todas las noticias que has guardado
+            para leer cuando quieras.
+        </p>
+    </section>
+
+    @if (cargando) {
+
+        <p class="mensaje">Cargando favoritos...</p>
+
+    } @else if (noticiasFavoritas.length > 0) {
+
+        <section class="contenedor-favoritos">
+
+            @for (noticia of noticiasFavoritas; track noticia.id) {
+
+                <article class="tarjeta-favorita">
+
+                    <img
+                        [src]="noticia.imagen"
+                        [alt]="noticia.titulo"
+                    >
+
+                    <div class="contenido-tarjeta">
+
+                        <span class="categoria">
+                            {{ noticia.categoria }}
+                        </span>
+
+                        <h2>{{ noticia.titulo }}</h2>
+
+                        <p>{{ noticia.descripcion }}</p>
+
+                        <a
+                            [routerLink]="['/detalle', noticia.id]"
+                            class="boton-leer"
+                        >
+                            Leer más →
+                        </a>
+
+                    </div>
+
+                </article>
+
+            }
+
+        </section>
+
+    } @else {
+
+        <section class="sin-favoritos">
+
+            <h2>♡ Todavía no tienes noticias favoritas</h2>
+
+            <p>
+                Explora nuestras noticias y guarda las que
+                más te interesen.
+            </p>
+
+            <a routerLink="/noticias" class="boton-explorar">
+                Explorar noticias
+            </a>
+
+        </section>
+
+    }
+
+</main>

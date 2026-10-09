@@ -1,0 +1,151 @@
+
+/* Página de favoritos */
+.pagina-favoritos {
+    min-height: 75vh;
+    padding: 45px 25px;
+    background-color: #f4f7fb;
+}
+
+/* Encabezado de la página */
+.encabezado-favoritos {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.encabezado-favoritos h1 {
+    font-size: 34px;
+    color: #193d75;
+    margin-bottom: 12px;
+}
+
+.encabezado-favoritos p {
+    color: #666;
+    font-size: 17px;
+}
+
+/* Contenedor de noticias favoritas */
+.contenedor-favoritos {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+/* Tarjetas */
+.tarjeta-favorita {
+    background-color: white;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s;
+}
+
+.tarjeta-favorita:hover {
+    transform: translateY(-5px);
+}
+
+/* Imagen */
+.tarjeta-favorita img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Información de la tarjeta */
+.contenido-tarjeta {
+    padding: 22px;
+}
+
+.categoria {
+    display: inline-block;
+    background-color: #e7f0ff;
+    color: #2459a6;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.contenido-tarjeta h2 {
+    color: #193d75;
+    font-size: 21px;
+    margin: 15px 0;
+}
+
+.contenido-tarjeta p {
+    color: #555;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Botón Leer más */
+.boton-leer,
+.boton-explorar {
+    display: inline-block;
+    background-color: #2459a6;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.boton-leer:hover,
+.boton-explorar:hover {
+    background-color: #193d75;
+}
+
+/* Cuando no hay favoritos */
+.sin-favoritos {
+    max-width: 650px;
+    margin: 60px auto;
+    padding: 45px 25px;
+    background-color: white;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+}
+
+.sin-favoritos h2 {
+    color: #193d75;
+    margin-bottom: 15px;
+}
+
+.sin-favoritos p {
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.mensaje {
+    text-align: center;
+    color: #555;
+}
+
+/* Adaptación para tabletas */
+@media (max-width: 900px) {
+    .contenedor-favoritos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Adaptación para celulares */
+@media (max-width: 600px) {
+    .pagina-favoritos {
+        padding: 25px 15px;
+    }
+
+    .contenedor-favoritos {
+        grid-template-columns: 1fr;
+    }
+
+    .encabezado-favoritos h1 {
+        font-size: 27px;
+    }
+
+    .sin-favoritos {
+        padding: 30px 20px;
+    }
+}
+

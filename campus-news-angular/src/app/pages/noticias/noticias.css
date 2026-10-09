@@ -1,0 +1,95 @@
+
+/* Página de noticias de Campus News */
+
+.pagina-noticias {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 24px;
+    font-family: Arial, sans-serif;
+}
+
+.pagina-noticias h2 {
+    color: #163b73;
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+.pagina-noticias section > p {
+    color: #555;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+/* Distribución de las tarjetas */
+.contenedor-noticias {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+/* Diseño de cada noticia */
+.tarjeta {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-5px);
+}
+
+/* Imágenes uniformes */
+.tarjeta img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    display: block;
+}
+
+.tarjeta-contenido {
+    padding: 20px;
+}
+
+.categoria {
+    color: #2563a6;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.tarjeta h3 {
+    color: #163b73;
+    font-size: 20px;
+    margin: 12px 0;
+}
+
+.tarjeta p {
+    color: #555;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.tarjeta a {
+    color: #163b73;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.tarjeta a:hover {
+    text-decoration: underline;
+}
+
+/* Adaptación a celulares y tabletas */
+@media (max-width: 900px) {
+    .contenedor-noticias {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .contenedor-noticias {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,119 @@
+
+<!-- Página de inicio de Campus News -->
+
+<main>
+
+    <!-- Presentación principal -->
+    <section class="inicio">
+
+        <div class="presentacion">
+            <h1>Tu universidad, en un solo lugar.</h1>
+
+            <p>
+                Noticias, oportunidades y eventos pensados para
+                mantenerte conectado con la vida universitaria.
+            </p>
+
+            <a routerLink="/noticias" class="boton">
+                Explorar Noticias
+            </a>
+        </div>
+
+        <img
+            src="img/estudiantes.jfif"
+            alt="Estudiantes universitarios"
+        >
+
+    </section>
+
+    <!-- Noticias destacadas -->
+    <section class="destacadas">
+
+        <h2>Noticias destacadas</h2>
+
+        <div class="contenedor-noticias">
+
+            @for (noticia of noticiasDestacadas; track noticia.id) {
+
+                <article class="tarjeta">
+
+                    <img
+                        [src]="noticia.imagen"
+                        [alt]="noticia.titulo"
+                    >
+
+                    <div class="tarjeta-contenido">
+
+                        <span class="categoria">
+                            {{ noticia.categoria }}
+                        </span>
+
+                        <h3>{{ noticia.titulo }}</h3>
+
+                        <p>{{ noticia.descripcion }}</p>
+
+                        <a [routerLink]="['/detalle', noticia.id]">
+                            Leer más →
+                        </a>
+
+                    </div>
+
+                </article>
+
+            } @empty {
+                <p>No hay noticias destacadas disponibles.</p>
+            }
+
+        </div>
+
+    </section>
+
+    <!-- Información del sitio -->
+    <section class="informacion">
+
+        <h2>Todo lo que necesitas saber</h2>
+
+        <div class="opciones">
+
+            <article>
+                <h3>Noticias actualizadas</h3>
+
+                <p>
+                    Mantente informado sobre las novedades y acontecimientos
+                    de nuestra comunidad universitaria.
+                </p>
+            </article>
+
+            <article>
+                <h3>Oportunidades</h3>
+
+                <p>
+                    Encuentra becas, convocatorias y opciones para tu
+                    crecimiento académico y profesional.
+                </p>
+            </article>
+
+            <article>
+                <h3>Eventos</h3>
+
+                <p>
+                    Descubre actividades académicas, culturales y
+                    tecnológicas en las que puedes participar.
+                </p>
+            </article>
+
+        </div>
+
+        <div class="botones-informacion">
+            <a routerLink="/noticias" class="boton">
+                Ver noticias
+            </a>
+
+            <a routerLink="/contacto" class="boton">
+                Contáctanos
+            </a>
+        </div>
+
+    </section>
+
+</main>

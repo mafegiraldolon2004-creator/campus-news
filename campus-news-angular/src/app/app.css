@@ -1,0 +1,19 @@
+
+/* Pie de página */
+.pie-pagina {
+    background-color: #163b73;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    font-family: Arial, sans-serif;
+}
+
+.pie-pagina h2 {
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.pie-pagina p {
+    font-size: 14px;
+    margin: 8px 0;
+}
